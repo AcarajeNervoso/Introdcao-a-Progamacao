@@ -1,0 +1,31 @@
+using System;
+{
+ public class HelloWorld;
+ {
+    public static void Main;
+    {
+        int num1, num2, num3, soma, produto;
+                 float media;
+                 
+                 //Entrada de Dados
+                
+                Console.WriteLine("insira o preço do primeiro posto:");
+                num1 = int.Parse(Console.ReadLine());
+                Console.WriteLine("insira o preço do segundo posto:");
+                num2 = int.Parse(Console.ReadLine());
+                Console.WriteLine("insira o preço do terceiro posto:");
+                num3 = int.Parse(Console.ReadLine());
+                 
+                 //Resolução
+                 
+                 soma = num1 + num2 + num3;
+                 media = soma /3;
+                 produto = num1 * num2 *num3;
+                 
+                 Console.WriteLine("a media aritimetica é:" media);
+                 Console.WriteLine("O somatorio é:" soma);
+                 Console.WriteLine("O produtorio é:" produto);
+        
+    }
+  }   
+ }
