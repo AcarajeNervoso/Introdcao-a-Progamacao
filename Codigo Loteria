@@ -1,0 +1,41 @@
+using System;
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        int[,] apostas = new int[13, 1]; // Matriz para guardar as apostas
+        int[,] resultados = new int[13, 1]; // Matriz para guardar os resultados oficiais
+
+        // Leitura das apostas
+        Console.WriteLine("Digite suas apostas (1 para vitoria do time 1, 2 para empate, 3 para vitoria do time 2):");
+        for (int i = 0; i < 13; i++)
+        {
+            Console.Write($"Jogo {i + 1}: ");
+            apostas[i, 0] = int.Parse(Console.ReadLine());
+        }
+
+        // Simulacao dos resultados oficiais (aleatorio)
+        Random random = new Random();
+        Console.WriteLine("\nResultados Oficiais:");
+        for (int i = 0; i < 13; i++)
+        {
+            int resultado = random.Next(1, 4); // Gera um numero aleatorio entre 1 e 3
+            resultados[i, 0] = resultado; // Marca o resultado oficial na matriz
+            Console.WriteLine($"Jogo {i + 1}: {resultado}");
+        }
+
+        // Comparacao entre resultados e apostas
+        int pontos = 0;
+        for (int i = 0; i < 13; i++)
+        {
+            if (resultados[i, 0] == apostas[i, 0])
+            {
+                pontos++; // Aposta correta, ganha um ponto
+            }
+        }
+
+        // Exibe o numero de pontos
+        Console.WriteLine($"\nVoce fez {pontos} ponto(s)!");
+    }
+}
