@@ -1,2 +1,6 @@
-# Praticadeprog01
-Codigos de estudo na programação em c#
+# [JD0007] Introdução à Programação de Jogos Digitais 
+----
+
+UNEB
+
+C# - Codes
